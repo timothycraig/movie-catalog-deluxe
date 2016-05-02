@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="column">
+    <table>
+      <thead>
+        <tr>
+          <th>Actor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @list_of_actors.each do |actor| %>
+        <tr>
+          <td>
+            <a href="/actors/<%= actor["id"] %>"><%= actor["name"] %></a>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

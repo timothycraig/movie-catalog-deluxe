@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Catalog Delux</title>
+
+    <link rel="stylesheet" href="/stylesheets/foundation.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Movie Catalog Delux</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/actors">Actors</a></li>
+          <li><a href="/movies">Movies</a></li>
+        </ul>
+      </div>
+
+    <div class="row column" style="padding-top:1%">
+      <%= yield %>
+    </div>
+
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+  </body>
+</html>

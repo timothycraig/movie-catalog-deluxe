@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="column callout">
+    <h5 align="center"><%= @movies.first["title"] %></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Genre</th>
+          <th>Studio</th>
+          <th>Year</th>
+          <th>Rating</th>
+          <th>Actor</th>
+          <th>Character</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @movies.each do |movie| %>
+          <tr>
+            <td>
+              <%= movie["genre"] %>
+            </td>
+            <td>
+              <%= movie["studio"] %>
+            </td>
+            <td>
+              <%= movie["year"] %>
+            </td>
+            <td>
+              <%= movie["rating"] %>
+            </td>
+            <td>
+              <a href="/actors/<%= movie["actor_id"]%>"><%= movie["actor"] %></a>
+            </td>
+            <td>
+              <%= movie["character"] %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p><a href="/movies">Back to Movies ></a></p>

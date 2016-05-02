@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="column callout">
+    <h5 align="center"><%= @actors.first["name"] %></h5>
+  </div>
+</div>
+<div class="row">
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Movie Title</th>
+          <th>Character</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @actors.each do |actor| %>
+          <tr>
+            <td>
+              <a href="/movies/<%= actor["id"] %>"><%= actor["title"] %></a>
+            </td>
+            <td>
+              <%= actor["character"] %>
+            </td>
+            <td>
+              <%= actor["year"] %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p><a href="/actors">Back to Actors ></a></p>
